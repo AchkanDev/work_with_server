@@ -8,14 +8,14 @@ class StudentsCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.fromLTRB(8, 8, 8, 8),
+      margin: const EdgeInsets.fromLTRB(8, 8, 8, 8),
       height: 84,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
-            padding: EdgeInsets.all(8),
+            padding: const EdgeInsets.all(8),
             height: 64,
             width: 64,
             alignment: Alignment.center,
@@ -37,7 +37,7 @@ class StudentsCard extends StatelessWidget {
                   fontSize: 24),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             width: 8,
           ),
           Expanded(
@@ -46,7 +46,7 @@ class StudentsCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(student.firstName + " " + student.lastName),
-                SizedBox(
+                const SizedBox(
                   height: 8,
                 ),
                 Container(
@@ -56,7 +56,7 @@ class StudentsCard extends StatelessWidget {
                   ),
                   child: Text(
                     student.course,
-                    style: TextStyle(fontSize: 10),
+                    style: const TextStyle(fontSize: 10),
                   ),
                 )
               ],
@@ -73,7 +73,7 @@ class StudentsCard extends StatelessWidget {
                 ),
                 Text(
                   student.score.toString(),
-                  style: TextStyle(fontWeight: FontWeight.bold),
+                  style: const TextStyle(fontWeight: FontWeight.bold),
                 ),
               ],
             ),

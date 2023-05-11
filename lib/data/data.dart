@@ -36,3 +36,18 @@ Future<List<StudentData>> getStudents() async {
   }
   return students;
 }
+
+Future<StudentData> postStudents(firstName, lastName, course, int score) async {
+  final response = await HttpClient.instance.post("experts/student", data: {
+    "first_name": firstName,
+    "last_name": lastName,
+    "course": course,
+    "score": score
+  });
+
+  if (response.statusCode == 200) {
+    return StudentData.fromJson(response.data);
+  } else {
+    return throw Exception();
+  }
+}

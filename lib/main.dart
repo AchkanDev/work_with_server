@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:work_with_server/screen/home/home.dart';
+import 'package:work_with_server/screen/home.dart';
 import "package:work_with_server/data/data.dart";
 
 void main() {
@@ -17,7 +17,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        inputDecorationTheme:
+            const InputDecorationTheme(border: OutlineInputBorder()),
+        colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.blue)
+            .copyWith(secondary: Color(0xff16E5A7)),
       ),
       home: MyHomePage(),
     );
